@@ -7,11 +7,11 @@ export default {
       layout: 'raw',
     },
   },
-  code_interpreter: {
-    type: 'page',
-    title: '✨ Code Interpreter',
-    href: 'https://code.librechat.ai/pricing',
-  },
+  // code_interpreter: {
+  //   type: 'page',
+  //   title: '✨ Code Interpreter',
+  //   href: 'https://code.librechat.ai/pricing',
+  // },
   docs: {
     type: 'page',
     title: 'Docs',
@@ -35,12 +35,12 @@ export default {
       timestamp: false,
     },
   },
-  demo: {
-    type: 'page',
-    title: 'Demo',
-    href: 'https://chat.librechat.ai/',
-    // display: 'hidden',
-  },
+  // demo: {
+  //   type: 'page',
+  //   title: 'Demo',
+  //   href: 'https://chat.librechat.ai/',
+  //   // display: 'hidden',
+  // },
   changelog: {
     type: 'page',
     title: 'Changelog',
@@ -48,14 +48,14 @@ export default {
       layout: 'full',
     },
   },
-  pricing: {
-    title: 'Pricing',
-    display: 'hidden',
-    type: 'page',
-    theme: {
-      layout: 'full',
-    },
-  },
+  // pricing: {
+  //   title: 'Pricing',
+  //   display: 'hidden',
+  //   type: 'page',
+  //   theme: {
+  //     layout: 'full',
+  //   },
+  // },
   tos: {
     title: 'Terms of Service',
     type: 'page',

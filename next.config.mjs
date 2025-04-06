@@ -77,7 +77,7 @@ const nextraConfig = withNextra({
     serverComponentsExternalPackages: ['mongoose'],
     scrollRestoration: true,
   },
-  transpilePackages: ['react-tweet', 'react-syntax-highlighter', 'geist'],
+  transpilePackages: ['react-tweet', 'react-syntax-highlighter', 'geist','@lobehub/icons'],
   images: {
     remotePatterns: [
       {

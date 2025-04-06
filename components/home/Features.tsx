@@ -1,51 +1,48 @@
 import { ReactNode } from 'react'
-import Image, { type StaticImageData } from 'next/image'
-import { GitFork, BrainCog, Code, Bot, Search, Image as ImageIcon, Terminal } from 'lucide-react'
+// import Image, {type StaticImageData} from 'next/image'
+import { Bot, BrainCog, Code, GitFork, Image as ImageIcon, Search, Terminal } from 'lucide-react'
 import { BentoCard, BentoGrid } from '@/components/magicui/bento-grid'
-import CodeInterpreter from './img/code_interpreter.gif'
 import { HomeSection } from './components/HomeSection'
-import ArtifactsLight from './img/artifacts_light.png'
-import ArtifactsDark from './img/artifacts_dark.png'
-import AgentsLight from './img/agents_light.png'
-import AgentsDark from './img/agents_dark.png'
+// import ArtifactsLight from './img/artifacts_light.png'
+// import ArtifactsDark from './img/artifacts_dark.png'
 import { Header } from '../Header'
 
-const BentoBgImage = ({
-  imgLight,
-  imgDark,
-  alt,
-}: {
-  imgLight: StaticImageData
-  imgDark: StaticImageData
-  alt: string
-}) => (
-  <>
-    <Image
-      className="opacity-60 top-0 right-0 dark:hidden hidden md:block"
-      style={{
-        objectFit: 'contain',
-        objectPosition: 'top right',
-        maskImage: 'linear-gradient(to top, rgba(0,0,0,0) 15%, rgba(0,0,0,1))',
-      }}
-      src={imgLight}
-      fill
-      alt={alt}
-      sizes="(min-width: 1024px) 33vw, 100vw"
-    />
-    <Image
-      className="opacity-60 top-0 right-0 hidden dark:md:block"
-      style={{
-        objectFit: 'contain',
-        objectPosition: 'top right',
-        maskImage: 'linear-gradient(to top, rgba(0,0,0,0) 15%, rgba(0,0,0,1))',
-      }}
-      src={imgDark}
-      fill
-      alt={alt}
-      sizes="(min-width: 1024px) 33vw, 100vw"
-    />
-  </>
-)
+// const BentoBgImage = ({
+//                         imgLight,
+//                         imgDark,
+//                         alt,
+//                       }: {
+//   imgLight: StaticImageData
+//   imgDark: StaticImageData
+//   alt: string
+// }) => (
+//   <>
+//     <Image
+//       className="opacity-60 top-0 right-0 dark:hidden hidden md:block"
+//       style={{
+//         objectFit: 'contain',
+//         objectPosition: 'top right',
+//         maskImage: 'linear-gradient(to top, rgba(0,0,0,0) 15%, rgba(0,0,0,1))',
+//       }}
+//       src={imgLight}
+//       fill
+//       alt={alt}
+//       sizes="(min-width: 1024px) 33vw, 100vw"
+//     />
+//     <Image
+//       className="opacity-60 top-0 right-0 hidden dark:md:block"
+//       style={{
+//         objectFit: 'contain',
+//         objectPosition: 'top right',
+//         maskImage: 'linear-gradient(to top, rgba(0,0,0,0) 15%, rgba(0,0,0,1))',
+//       }}
+//       src={imgDark}
+//       fill
+//       alt={alt}
+//       sizes="(min-width: 1024px) 33vw, 100vw"
+//     />
+//   </>
+// )
 
 type Feature = {
   Icon: React.ComponentType
@@ -64,7 +61,7 @@ const features: Feature[] = [
     description: 'Advanced agents with file handling, code interpretation, and API actions',
     href: '/docs/features/agents',
     cta: 'Meet the Agents!',
-    background: <BentoBgImage imgLight={AgentsLight} imgDark={AgentsDark} alt="Agents" />,
+    background: null,
     className: 'md:row-start-1 md:row-end-4 md:col-start-2 md:col-end-2',
   },
   {
@@ -74,9 +71,7 @@ const features: Feature[] = [
       'Execute code in multiple languages securely via API with zero setup - Python, JavaScript, TypeScript, Go, and more',
     href: '/docs/features/code_interpreter',
     cta: 'Start Coding!',
-    background: (
-      <BentoBgImage imgLight={CodeInterpreter} imgDark={CodeInterpreter} alt="Artifacts" />
-    ),
+    background: null,
     className: 'md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-3',
   },
   {
@@ -94,7 +89,7 @@ const features: Feature[] = [
     description: 'Create React, HTML code, and Mermaid diagrams in chat',
     href: '/docs/features/artifacts',
     cta: 'Craft Some Code!',
-    background: <BentoBgImage imgLight={ArtifactsLight} imgDark={ArtifactsDark} alt="Artifacts" />,
+    background: null,
     className: 'md:col-start-3 md:col-end-3 md:row-start-1 md:row-end-2',
   },
   {
